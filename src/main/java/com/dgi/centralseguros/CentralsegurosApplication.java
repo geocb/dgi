@@ -1,0 +1,14 @@
+package com.dgi.centralseguros;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CentralsegurosApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CentralsegurosApplication.class, args);
+	}
+
+
+}
