@@ -14,10 +14,12 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class TelefoneCliente {
 
+    @Id
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "cliente_codCliente")
+    @JoinColumn(name = "codCliente")
     private Cliente cliente;
 
+    @Id
     @Column(nullable = false)
     private Integer telefones;
 }

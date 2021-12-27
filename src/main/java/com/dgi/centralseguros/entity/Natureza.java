@@ -16,7 +16,7 @@ public class Natureza {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer codNatureza;
+    private Integer codNtureza;
 
     private String nomeNaturza;
     private Integer ramoNatureza;

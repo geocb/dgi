@@ -22,19 +22,19 @@ public class Seguro {
     private String seguro;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "cliente_codCliente")
+    @JoinColumn(name = "codCliente")
     private Cliente cliente;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "produtor_codProdutor")
+    @JoinColumn(name = "codProdutor")
     private Produtor produtor;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "seguradora_codSeguradora")
+    @JoinColumn(name = "codSeguradora")
     private Seguradora seguradora;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "ramo_codRamo")
+    @JoinColumn(name = "codRamo")
     private Ramo ramo;
 
     private Double valor;
@@ -43,7 +43,7 @@ public class Seguro {
     private Data dataFinal;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "marca_codMarca")
+    @JoinColumn(name = "codMarca")
     private Marca marca;
 
     private String modelo;
@@ -54,7 +54,7 @@ public class Seguro {
     private Boolean tipoIs;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "cobertura_codCobertura")
+    @JoinColumn(name = "codCobertura")
     private Cobertura cobertura;
 
     private Integer is;
@@ -79,7 +79,7 @@ public class Seguro {
     private String concessionaria;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "licenciamento_codLicencia")
+    @JoinColumn(name = "codLicencia")
     private Licenciamento licenciamento;
 
     private String endossos;
@@ -94,6 +94,6 @@ public class Seguro {
     private Integer valorKitGas;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "parcela_chaveParcela")
+    @JoinColumn(name = "chaveParcela")
     private Parcela parcela;
 }

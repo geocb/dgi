@@ -14,12 +14,14 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class SeguroCob {
 
+    @Id
     @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "seguro_codSeguro")
+    @JoinColumn(name = "codSeguro")
     private Seguro seguro;
 
+    @Id
     @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "cobertura_codCobertura")
+    @JoinColumn(name = "codCobertura")
     private Cobertura cobertura;
 
     private Integer valor;

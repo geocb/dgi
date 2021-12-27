@@ -19,8 +19,8 @@ public class Producao {
     private Integer codProducao;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "parcela_nParcela")
-    @JoinColumn(name = "parcela_chaveParcela")
+    @JoinColumn(name = "nParcela")
+    @JoinColumn(name = "chaveParcela")
     private Parcela parcela;
 
     private Data data;

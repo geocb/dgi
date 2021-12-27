@@ -14,12 +14,15 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Parcela {
 
+    @Id
     @Column(nullable = false)
     private Integer chaveParcela;
 
+    @Id
     @Column(nullable = false)
     private Integer nParcela;
 
+    @Id
     @Column(nullable = false)
     private Integer tParcela;
 
@@ -27,7 +30,7 @@ public class Parcela {
     private Double valor;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "formaPagamento_codPagamento")
+    @JoinColumn(name = "codPagamento")
     private FormaPagamento formaPagamento;
 
     private String cancelado;

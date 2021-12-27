@@ -18,22 +18,21 @@ public class CabProducao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer chaveCabProd;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "seguro_codSeguro")
-    @JoinColumn(name = "seguro_seguro")
-    private Seguro seguro;
-
     private Data data;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "produtor_codProdutor")
+    @JoinColumn(name = "codProdutor")
     private Produtor produtor;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "seguradora_codSeguradora")
+    @JoinColumn(name = "codSeguradora")
     private Seguradora seguradora;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "motivo_codMotivo")
+    @JoinColumn(name = "codMotivo")
     private Motivo motivo;
+
+    private String seguro;
+
+    private Integer codSeguro;
 }

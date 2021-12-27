@@ -14,9 +14,11 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class CepCliente {
 
+    @Id
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "cliente_codCliente")
+    @JoinColumn(name = "codCliente")
     private Cliente cliente;
 
+    @Id
     private Integer cepsCliente;
 }

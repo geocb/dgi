@@ -22,7 +22,7 @@ public class Carta {
     private Data renovacao;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JoinColumn(name = "licenciamento_codLicencia")
+    @JoinColumn(name = "codLicencia")
     private Licenciamento licenciamento;
 
     private String finalAniver;
